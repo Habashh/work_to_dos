@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    text-align: center;
+}
+body {background-color: #04A1BF;
+}
+h1{
+    font-size: 45px;
+    font-weight: bold;
+     color:  #ffffff;
+     font-family: 'Arimo', sans-serif;
+}
+#text1,#text2,#text3{
+    font: bold 25px/60px 'Arimo', sans-serif;
+}
+
+#text1{
+    color: #FECC5D;
+}
+#text2{
+    color: #45D87B;
+}
+#text3{
+    color :#05697C;
+}
+ul {
+    list-style: none;
+    margin: 10px;
+}
+
+#comment_form, #comment_form input[type='text']{
+    width: 90%;
+}
+
+input[type='submit'] {
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    width: 5%;
+    margin: 10px;
+    border-radius: 5px;
+    background: url("../work_to_dos/imgs/pen1.png")  50% ;
+    display: inline-block;
+}
+
+input[type='submit']:hover {
+    cursor: pointer;
+    color: black;
+    background: url("../work_to_dos/imgs/pen2.png") 50% ;
+    }
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #2D9BE4;
+    font: bold 23px black ,'Arimo', sans-serif;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.comment {
+    text-align: left;
+    margin: 10px ;
+    padding: 10px;
+    background-color: #4CB9CD;
+    border: 2px solid #137184;
+    border-radius: 8px;
+    width: 80%;
+    font: bold 25px/40px 'Arimo', sans-serif ;
+    color: #ffffff;
+    }
+    .comment:hover  {
+        background: url("../work_to_dos/imgs/x.png") no-repeat 100% ;
+    }
