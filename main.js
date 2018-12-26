@@ -11,21 +11,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
     loadComments();
     comment_form.addEventListener("submit", (e) => {
         e.preventDefault();
-       
-        let comment_text = comment_input.value;
-        if(comment_text.trim() === "") {
-          return  alert("Please write a comment");
-        } 
-        else if(comment_text.length > 28){
-         return  alert("Please reduse your comment to less than 28 characters");
-        } else {
+       let comment_text = comment_input.value;
             addComment(comment_text.trim());
             saveComment(comment_text.trim());
             comment_input.value = "";
-        }
     })
-
 })
+
 function addComment(text) {
     let template = document.createElement("li");
     let template2 = document.createElement("INPUT");
