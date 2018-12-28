@@ -58,6 +58,9 @@ function deleteComment(text) {
     } else {
         comments = JSON.parse(comments);
     }
-    comments.pop(text);
-    localStorage.setItem("local_comments", JSON.stringify(comments));
+    var index = comments.indexOf(text); 
+if (index !== -1) {
+    comments.splice(index, 1);
+}
+       localStorage.setItem("local_comments", JSON.stringify(comments));
 }
