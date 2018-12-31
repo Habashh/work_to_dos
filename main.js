@@ -50,7 +50,7 @@ function loadComments() {
     for(let comment of comments) {
         addComment(comment);
     }
-}
+} 
 function deleteComment(text) {
     let comments = localStorage.getItem("local_comments");
     if(comments == null) {
@@ -58,9 +58,12 @@ function deleteComment(text) {
     } else {
         comments = JSON.parse(comments);
     }
-    var index = comments.indexOf(text); 
-if (index !== -1) {
-    comments.splice(index, 1);
-}
+    
+   var index1 = comments.indexOf(text); 
+   var index2 = comments.lastIndexOf(text); 
+if (index1 !== -1 || index1==null) {
+    comments.splice(index1, 1);
+         }else if (index2 !== -1 || index2==null) {
+            comments.splice(index2, 1);}
        localStorage.setItem("local_comments", JSON.stringify(comments));
 }
