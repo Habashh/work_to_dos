@@ -29,7 +29,7 @@ function addComment(text) {
     comments_list.insertBefore(template, comments_list.childNodes[0]);
     template.appendChild(template2);
     template.onclick = function() {this.parentNode.removeChild(this), deleteComment(text);}
-    }
+}
 
    
 function saveComment(text) {
@@ -58,12 +58,8 @@ function deleteComment(text) {
     } else {
         comments = JSON.parse(comments);
     }
-    
-   var index1 = comments.indexOf(text); 
-   var index2 = comments.lastIndexOf(text); 
-if (index1 !== -1 || index1==null) {
-    comments.splice(index1, 1);
-         }else if (index2 !== -1 || index2==null) {
-            comments.splice(index2, 1);}
+      var index= comments.indexOf(text); 
+if (index !== -1){
+            comments.splice(index, 1);}
        localStorage.setItem("local_comments", JSON.stringify(comments));
 }
